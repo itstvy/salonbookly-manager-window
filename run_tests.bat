@@ -1,0 +1,1 @@
+robot --output logs/output.xml --log logs/log.html --report logs/report.html tests/authentication/sign-in.robot
