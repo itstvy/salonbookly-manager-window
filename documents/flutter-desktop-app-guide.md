@@ -177,7 +177,3 @@ END
 * 🛡️ Kiểm tra quyền chạy (WinAppDriver & App cùng level: admin/non-admin)
 
 ---
-
-✨ Bạn chỉ cần copy file `.md` này là có đủ 🎨 icon + màu + code block đẹp.
-
-👉 Bạn muốn mình làm thêm **phiên bản có highlight màu code (syntax + badge UI)** không?

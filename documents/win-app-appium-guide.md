@@ -506,7 +506,3 @@ Open AUT
 * Gắn nhãn kịch bản: **\[Positive]**, **\[Negative]**, **\[Navigate]** trước tên test case.
 
 ---
-
-**Kết luận**: Với bộ **keywords** và **công thức locator/XPath** trên, bạn có thể xây dựng test Windows App ổn định. Khi cần sâu hơn (ký tên, print, multi-window), dùng kỹ thuật **attach theo handle** bằng `appTopLevelWindow`. Nếu UI khó inspect, ưu tiên **Inspect.exe** hoặc **FlaUInspect**.
-
-> Cần mình **tạo sẵn Resource file** (.robot) theo module (Login/Checkout/Technician/Appointment…) hoặc **bộ locator** theo màn hình của dự án? Hãy nói tên màn hình, mình soạn ngay.
