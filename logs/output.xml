@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.3 on win32)" generated="2025-08-28T16:32:38.025887" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.3 on win32)" generated="2025-08-29T10:32:22.698306" rpa="false" schemaversion="5">
 <suite id="s1" name="Sign-In" source="D:\Automation-Testing\Robot-Framework\Salonbookly-WINDOW\tests\authentication\sign-in.robot">
 <kw name="Open Salonbookly Window App" owner="common-keywords" type="SETUP">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-08-28T16:32:38.588172" level="INFO">&amp;{caps} = { platformName=Windows | automationName=Windows | app=C:\Download APP\Salonbookly_Manager_Dev\manager.exe }</msg>
+<msg time="2025-08-29T10:32:24.526150" level="INFO">&amp;{caps} = { platformName=Windows | automationName=Windows | app=C:\Download APP\Salonbookly_Manager_Dev\manager.exe }</msg>
 <var>&amp;{caps}</var>
 <arg>platformName=${PLATFORM_NAME}</arg>
 <arg>automationName=${AUTOMATION_NAME}</arg>
 <arg>app=${SALONBOOLY_DEV_APP}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-08-28T16:32:38.587109" elapsed="0.001154"/>
+<status status="PASS" start="2025-08-29T10:32:24.523862" elapsed="0.002859"/>
 </kw>
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>${REMOTE_URL}</arg>
@@ -21,125 +21,181 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-08-28T16:32:38.588564" elapsed="3.360824"/>
+<status status="PASS" start="2025-08-29T10:32:24.527382" elapsed="4.539791"/>
 </kw>
-<status status="PASS" start="2025-08-28T16:32:38.585950" elapsed="3.363879"/>
+<kw name="Get Source" owner="AppiumLibrary">
+<doc>Returns the entire source of the current page.</doc>
+<status status="PASS" start="2025-08-29T10:32:29.067799" elapsed="1.141948"/>
+</kw>
+<status status="PASS" start="2025-08-29T10:32:24.513229" elapsed="5.696846"/>
 </kw>
 <test id="s1-t1" name="Verify the Salon user sign in successfully when input correct account in Sign In form" line="7">
 <kw name="Given system displays Sign in screen" owner="sign-in-keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T16:32:44.533581" level="INFO">xpath criteria: //Text[@Name='Sign In'][1]
-xpath criteria: //Text[@Name='Sign In'][1]</msg>
+<msg time="2025-08-29T10:32:31.764746" level="INFO">xpath criteria: //Text[@Name='Sign In'][1]</msg>
 <arg>${SIGN_IN_FORM_TITLE}</arg>
+<arg>5s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-08-28T16:32:41.954082" elapsed="2.579718"/>
+<status status="PASS" start="2025-08-29T10:32:30.216247" elapsed="1.548768"/>
 </kw>
-<status status="PASS" start="2025-08-28T16:32:41.952894" elapsed="2.581105"/>
+<status status="PASS" start="2025-08-29T10:32:30.215175" elapsed="1.550160"/>
 </kw>
 <kw name="When user input correct data in User name field" owner="sign-in-keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T16:32:45.365137" level="INFO">xpath criteria: //Text[@Name='User Name']/following::Edit[@Name='Enter your username']</msg>
+<msg time="2025-08-29T10:32:33.256320" level="INFO">xpath criteria: //Text[@Name='User Name']/following::Edit[@Name='Enter your username']</msg>
 <arg>${USER_NAME_FIELD}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-08-28T16:32:44.535257" elapsed="0.830068"/>
+<status status="PASS" start="2025-08-29T10:32:31.768850" elapsed="1.487698"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T16:32:45.368251" level="INFO">Clicking element 'xpath=//Text[@Name='User Name']/following::Edit[@Name='Enter your username']'.</msg>
-<msg time="2025-08-28T16:32:46.704382" level="INFO">xpath criteria: //Text[@Name='User Name']/following::Edit[@Name='Enter your username']</msg>
+<msg time="2025-08-29T10:32:33.260759" level="INFO">Clicking element 'xpath=//Text[@Name='User Name']/following::Edit[@Name='Enter your username']'.</msg>
+<msg time="2025-08-29T10:32:34.828455" level="INFO">xpath criteria: //Text[@Name='User Name']/following::Edit[@Name='Enter your username']</msg>
 <arg>${USER_NAME_FIELD}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T16:32:45.365668" elapsed="1.338911"/>
+<status status="PASS" start="2025-08-29T10:32:33.256998" elapsed="1.571729"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-28T16:32:46.708064" level="INFO">Typing text 'vywindow@yopmail.com' into text field 'xpath=//Text[@Name='User Name']/following::Edit[@Name='Enter your username']'</msg>
-<msg time="2025-08-28T16:32:48.881075" level="INFO">xpath criteria: //Text[@Name='User Name']/following::Edit[@Name='Enter your username']</msg>
+<msg time="2025-08-29T10:32:34.833851" level="INFO">Typing text 'salon.dev@yopmail.com' into text field 'xpath=//Text[@Name='User Name']/following::Edit[@Name='Enter your username']'</msg>
+<msg time="2025-08-29T10:32:37.420263" level="INFO">xpath criteria: //Text[@Name='User Name']/following::Edit[@Name='Enter your username']</msg>
 <arg>${USER_NAME_FIELD}</arg>
 <arg>${CORRECT_SALON_EMAIL}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T16:32:46.704956" elapsed="2.176282"/>
+<status status="PASS" start="2025-08-29T10:32:34.829271" elapsed="2.591225"/>
 </kw>
-<status status="PASS" start="2025-08-28T16:32:44.534707" elapsed="4.346708"/>
+<status status="PASS" start="2025-08-29T10:32:31.767682" elapsed="5.653077"/>
 </kw>
 <kw name="And user input correct data in Password field" owner="sign-in-keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T16:32:49.670670" level="INFO">xpath criteria: //Text[@Name='Password']/following::Edit[@Name='Enter your password']</msg>
+<msg time="2025-08-29T10:32:38.520183" level="INFO">xpath criteria: //Text[@Name='Password']/following::Edit[@Name='Enter your password']</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-08-28T16:32:48.882610" elapsed="0.788218"/>
+<status status="PASS" start="2025-08-29T10:32:37.422764" elapsed="1.097683"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T16:32:49.673409" level="INFO">Clicking element 'xpath=//Text[@Name='Password']/following::Edit[@Name='Enter your password']'.</msg>
-<msg time="2025-08-28T16:32:51.257442" level="INFO">xpath criteria: //Text[@Name='Password']/following::Edit[@Name='Enter your password']</msg>
+<msg time="2025-08-29T10:32:38.524858" level="INFO">Clicking element 'xpath=//Text[@Name='Password']/following::Edit[@Name='Enter your password']'.</msg>
+<msg time="2025-08-29T10:32:40.419503" level="INFO">xpath criteria: //Text[@Name='Password']/following::Edit[@Name='Enter your password']</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T16:32:49.671137" elapsed="1.586469"/>
+<status status="PASS" start="2025-08-29T10:32:38.520901" elapsed="1.898850"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-28T16:32:51.260310" level="INFO">Typing text 'Dev123!@#' into text field 'xpath=//Text[@Name='Password']/following::Edit[@Name='Enter your password']'</msg>
-<msg time="2025-08-28T16:32:52.474487" level="INFO">xpath criteria: //Text[@Name='Password']/following::Edit[@Name='Enter your password']</msg>
+<msg time="2025-08-29T10:32:40.424214" level="INFO">Typing text 'Dev123!@#' into text field 'xpath=//Text[@Name='Password']/following::Edit[@Name='Enter your password']'</msg>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2025-08-29T10:32:42.658993" level="FAIL">NoSuchWindowException: Message: Currently selected window has been closed
+Stacktrace:
+ProxyRequestError: Request failed with status code 400
+    at WADProxy.proxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:279:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at ProtocolConverter.convertAndProxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\protocol-converter.js:309:12)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:313:12)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\winappdriver.js:51:12)
+    at WADProxy.command (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:327:32)
+    at WinAppDriver.sendCommand (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\winappdriver.js:350:12)
+    at WindowsDriver.getScreenshot (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\commands\general.js:112:27)</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2025-08-29T10:32:42.352387" elapsed="0.350553">NoSuchWindowException: Message: Currently selected window has been closed
+Stacktrace:
+ProxyRequestError: Request failed with status code 400
+    at WADProxy.proxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:279:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at ProtocolConverter.convertAndProxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\protocol-converter.js:309:12)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:313:12)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\winappdriver.js:51:12)
+    at WADProxy.command (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:327:32)
+    at WinAppDriver.sendCommand (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\winappdriver.js:350:12)
+    at WindowsDriver.getScreenshot (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\commands\general.js:112:27)</status>
+</kw>
+<msg time="2025-08-29T10:32:42.708247" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: Currently selected window has been closed
+Stacktrace:
+ProxyRequestError: Request failed with status code 400
+    at WADProxy.proxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:279:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at ProtocolConverter.convertAndProxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\protocol-converter.js:309:12)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:313:12)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\winappdriver.js:51:12)
+    at WADProxy.command (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:327:32)
+    at WinAppDriver.sendCommand (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\winappdriver.js:350:12)
+    at WindowsDriver.getScreenshot (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\commands\general.js:112:27)</msg>
+<msg time="2025-08-29T10:32:42.717196" level="INFO">xpath criteria: //Text[@Name='Password']/following::Edit[@Name='Enter your password']</msg>
+<msg time="2025-08-29T10:32:42.717660" level="FAIL">StaleElementReferenceException: Message: An element command failed because the referenced element is no longer attached to the DOM.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+ProxyRequestError: Request failed with status code 400
+    at WADProxy.proxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:279:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at ProtocolConverter.proxySetValue (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\protocol-converter.js:194:14)
+    at ProtocolConverter.convertAndProxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\protocol-converter.js:275:16)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:313:12)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\winappdriver.js:51:12)
+    at WADProxy.proxyReqRes (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:399:32)</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <arg>${CORRECT_SALON_PASSWORD}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T16:32:51.257939" elapsed="1.216711"/>
+<status status="FAIL" start="2025-08-29T10:32:40.420263" elapsed="2.307232">StaleElementReferenceException: Message: An element command failed because the referenced element is no longer attached to the DOM.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+ProxyRequestError: Request failed with status code 400
+    at WADProxy.proxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:279:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at ProtocolConverter.proxySetValue (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\protocol-converter.js:194:14)
+    at ProtocolConverter.convertAndProxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\protocol-converter.js:275:16)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:313:12)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\winappdriver.js:51:12)
+    at WADProxy.proxyReqRes (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:399:32)</status>
 </kw>
-<status status="PASS" start="2025-08-28T16:32:48.882091" elapsed="3.592731"/>
+<status status="FAIL" start="2025-08-29T10:32:37.421841" elapsed="5.306253">StaleElementReferenceException: Message: An element command failed because the referenced element is no longer attached to the DOM.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+ProxyRequestError: Request failed with status code 400
+    at WADProxy.proxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:279:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at ProtocolConverter.proxySetValue (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\protocol-converter.js:194:14)
+    at ProtocolConverter.convertAndProxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\protocol-converter.js:275:16)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:313:12)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\winappdriver.js:51:12)
+    at WADProxy.proxyReqRes (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:399:32)</status>
 </kw>
 <kw name="And user click on Sign In button" owner="sign-in-keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T16:32:53.287383" level="INFO">xpath criteria: //Text[@Name='Sign In'][2]</msg>
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-08-28T16:32:52.476064" elapsed="0.811482"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-28T16:32:53.290099" level="INFO">Clicking element 'xpath=//Text[@Name='Sign In'][2]'.</msg>
-<msg time="2025-08-28T16:32:54.896352" level="INFO">xpath criteria: //Text[@Name='Sign In'][2]</msg>
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-28T16:32:53.287865" elapsed="1.608720"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-28T16:32:59.899370" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-28T16:32:54.896937" elapsed="5.002694"/>
-</kw>
-<status status="PASS" start="2025-08-28T16:32:52.475493" elapsed="7.424304"/>
+<status status="NOT RUN" start="2025-08-29T10:32:42.733811" elapsed="0.000156"/>
 </kw>
 <kw name="Then system sign in successfully and navigate user to Checkout screen" owner="sign-in-keywords">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2025-08-28T16:33:00.834882" level="INFO">xpath criteria: //Text[@Name='Checkout']</msg>
-<arg>${CHECKOUT_TAB}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-08-28T16:32:59.901227" elapsed="0.933827"/>
-</kw>
-<status status="PASS" start="2025-08-28T16:32:59.900713" elapsed="0.934521"/>
+<status status="NOT RUN" start="2025-08-29T10:32:42.743070" elapsed="0.000197"/>
 </kw>
 <tag>Positive</tag>
 <tag>UI</tag>
-<status status="PASS" start="2025-08-28T16:32:41.950113" elapsed="18.885656"/>
+<status status="FAIL" start="2025-08-29T10:32:30.210411" elapsed="12.533745">StaleElementReferenceException: Message: An element command failed because the referenced element is no longer attached to the DOM.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+ProxyRequestError: Request failed with status code 400
+    at WADProxy.proxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:279:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at ProtocolConverter.proxySetValue (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\protocol-converter.js:194:14)
+    at ProtocolConverter.convertAndProxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\protocol-converter.js:275:16)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:313:12)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\winappdriver.js:51:12)
+    at WADProxy.proxyReqRes (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:399:32)</status>
 </test>
-<kw name="Close Salonbookly" owner="common-keywords" type="TEARDOWN">
-<kw name="Close Application" owner="AppiumLibrary">
-<doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" start="2025-08-28T16:33:00.837935" elapsed="0.536173"/>
-</kw>
-<status status="PASS" start="2025-08-28T16:33:00.837543" elapsed="0.536867"/>
-</kw>
-<status status="PASS" start="2025-08-28T16:32:38.030625" elapsed="23.343914"/>
+<status status="FAIL" start="2025-08-29T10:32:22.706557" elapsed="20.050280"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Positive</stat>
-<stat pass="1" fail="0" skip="0">UI</stat>
+<stat pass="0" fail="1" skip="0">Positive</stat>
+<stat pass="0" fail="1" skip="0">UI</stat>
 </tag>
 <suite>
-<stat name="Sign-In" id="s1" pass="1" fail="0" skip="0">Sign-In</stat>
+<stat name="Sign-In" id="s1" pass="0" fail="1" skip="0">Sign-In</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-08-29T10:32:42.708247" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: Currently selected window has been closed
+Stacktrace:
+ProxyRequestError: Request failed with status code 400
+    at WADProxy.proxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:279:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at ProtocolConverter.convertAndProxy (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\protocol-converter.js:309:12)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:313:12)
+    at WADProxy.proxyCommand (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\winappdriver.js:51:12)
+    at WADProxy.command (C:\Users\Tuong Vy\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:327:32)
+    at WinAppDriver.sendCommand (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\winappdriver.js:350:12)
+    at WindowsDriver.getScreenshot (C:\Users\Tuong Vy\.appium\node_modules\appium-windows-driver\lib\commands\general.js:112:27)</msg>
 </errors>
 </robot>

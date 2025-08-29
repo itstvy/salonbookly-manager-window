@@ -1,5 +1,6 @@
 *** Settings ***
 Library    AppiumLibrary
+Library    Process
 
 Resource    ../../resources/common/common-variables.robot
 Resource    ../../resources/common/common-keywords.robot

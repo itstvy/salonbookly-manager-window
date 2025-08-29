@@ -3,7 +3,7 @@ Resource    ../../../resources/common/common-settings.robot
 
 *** Keywords ***
 system displays Sign in screen
-    Wait Until Element Is Visible    ${SIGN_IN_FORM_TITLE}
+    Wait Until Element Is Visible    ${SIGN_IN_FORM_TITLE}    5s
 
 user input correct data in User name field
     Wait Until Element Is Visible    ${USER_NAME_FIELD}

@@ -3,7 +3,7 @@ Resource    ../../../resources/common/common-settings.robot
 
 *** Variables ***
 #Data Sign in account
-${CORRECT_SALON_EMAIL}    vywindow@yopmail.com
+${CORRECT_SALON_EMAIL}    salon.dev@yopmail.com
 ${CORRECT_SALON_PASSWORD}    Dev123!@#
 
 #Sign in elements
